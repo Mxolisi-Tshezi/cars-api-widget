@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
+
+
+	<script class="brandsTemplate" type="text/template">
+		<ul>
+		{{#each brands}}
+		<li>{{this}}</li>
+		{{/each}}
+	</ul>
+	</script>
+
+
+
+	<script class="colorsTemplate" type="text/template">
+		<ul>
+			{{#each colors}}
+			<li>{{this}}</li>
+			{{/each}}
+		</ul>
+		</script>
+
+	<script class="allCarsTemplate" type="text/template">
+
+		<table>
+        <tr>
+				<th>Brands</th>
+				<th>Model</th>
+				<th>Color</th>
+				<th>Price</th>
+
+        </tr>
+        {{#each allCars}}
+	<tr style="background-color:{{this.color}} ">
+            <td > {{this.make}} </a></td>
+            <td > {{this.model}} </a></td>
+			<td > {{this.color}} </a></td>
+			<td > {{this.price}} </a></td>	
+		</tr>
+        {{/each}}
+    </table>
+	</script>
+
+</head>
+
+<body>
+
+	<h1>Cars info</h1>
+
+	<h2>Colors</h2>
+	<div class="colors">
+
+	</div>
+
+	<h2>Brands</h2>
+	<div class="brands">
+
+	</div>
+
+	<h2>Cars</h2>
+	<div class="cars">
+
+	</div>
+	<script src="cars.js"></script>
+</body>
+
+</html>
