@@ -1,14 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Filter widget</title>
-	<link rel="stylesheet" href="style.css">
-
+	<title>filter widget</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<h1>Filter widget</h1>
+	<h1 class="heading"> Filter </h1>
+
+	<div class="dropdown">
+		<label class="brands">Filter by brand:</label>
+
+		<select class="brandsElem" name="brands"></select>
+		<script class="allBrandsTemplate" type="text/template-x">
+			<option value="">select a brand</option>
+      {{#each brands}}
+     <option value="{{this}}"> {{this}} </option>
+      {{/each}}
+    </script>
+
+		<br>
+
+		<label class="color">Filter by color:</label>
+
+		<select class="colorselection" name="color"></select>
+		<script class="allcolorsTemplate" type="text/template-x">
+			<option value="">select a color</option>
+      {{#each colors}}
+     <option value="{{this}}"> {{this}} </option>
+      {{/each}}
+    </script>
+	</div>
+
+	<br>
+
+	<button type="submit" class="submit"> submit </button>
+
+	<div class="filter">
+		<script class="filterAllCarsTemplate" type="text/template-x">
+			{{#if allCarsfilter}}
+           <table>
+                <tr>
+					<th>Brand</th>
+                    <th>Model</th>
+					<th>Color</th>
+                    <th>Price</th>
+                    <th>Registration Number</th>
+                </tr>
+            <tbody class="filterMake">        
+            {{#each allCarsfilter}}
+            <tr>
+                <td>{{make}}</td>
+                <td>{{model}}</td>
+                <td>{{color}}</td>
+                <td>R {{price}}</td>
+                <td>{{reg_number}}</td>
+            </tr>
+            {{/each}}
+            {{/if}}
+
+            {{#unless allCarsfilter}}
+                <h2>Empty</h2>
+            {{/unless}}
+        </script>
+		</tbody>
+		</table>
+	</div>
+
+	</div>
+	<script src="filter.js"></script>
 </body>
+
 </html>
