@@ -8,7 +8,7 @@ const allCarsTemplateSource = document.querySelector('.allCarsTemplate');
 const allCarsTemplate = Handlebars.compile(allCarsTemplateSource.innerHTML);
 
 
-axios.get('http://api-tutor.herokuapp.com/v1/cars')
+axios.get('https://api-tutor.herokuapp.com/v1/cars')
 .then(function (response) {
 
   const allCarsElem = document.querySelector('.cars');
@@ -18,7 +18,7 @@ axios.get('http://api-tutor.herokuapp.com/v1/cars')
   console.log(response.data)
 });
 
-axios.get('http://api-tutor.herokuapp.com/v1/colors')
+axios.get('https://api-tutor.herokuapp.com/v1/colors')
   .then(function (response) {
 
     const colorsElem = document.querySelector('.colors');
@@ -28,7 +28,7 @@ axios.get('http://api-tutor.herokuapp.com/v1/colors')
   });
 
 
-  axios.get('http://api-tutor.herokuapp.com/v1/makes')
+  axios.get('https://api-tutor.herokuapp.com/v1/makes')
   .then(function (response) {
 
      const brandsElem = document.querySelector('.brands');
