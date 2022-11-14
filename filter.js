@@ -6,8 +6,6 @@ const colorsTemplate = Handlebars.compile(allColorsTemplate.innerText);
 
 const filterAllCarsTemplate = document.querySelector('.filterAllCarsTemplate');
 const makeTemplate = Handlebars.compile(filterAllCarsTemplate.innerText);
-
-
 const brandsElem = document.querySelector('.brandsElem')
 
 axios.get("https://api-tutor.herokuapp.com/v1/makes")
@@ -44,20 +42,25 @@ submit.addEventListener('click', function () {
             .then(function (response) {
                 const allCarsfilter = response.data;
 
-                console.log(allCarsfilter);
                 filter.innerHTML = makeTemplate({
                     allCarsfilter
 
                 })
 
             })
+
+            // const allCarsElem = document.querySelector('.cars');
+            // allCarsElem.innerHTML = allCarsTemplate({
+            //    allCars: response.data
+            // })
+
+
     } else if (color.value) {
         axios
             .get("https://api-tutor.herokuapp.com/v1/cars/color/" + color.value)
             .then(function (response) {
                 const allCarsfilter = response.data;
 
-                console.log(allCarsfilter);
                 filter.innerHTML = makeTemplate({
                     allCarsfilter
 
@@ -70,7 +73,6 @@ submit.addEventListener('click', function () {
             .then(function (response) {
                 const allCarsfilter = response.data;
 
-                console.log(allCarsfilter);
                 filter.innerHTML = makeTemplate({
                     allCarsfilter
 
