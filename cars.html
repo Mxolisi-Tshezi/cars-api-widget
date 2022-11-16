@@ -12,21 +12,19 @@
 
 
 	<script class="brandsTemplate" type="text/template">
-		<ul>
 		{{#each brands}}
-		<li>{{this}}</li>
+		{{this}}
+		<br>
 		{{/each}}
-	</ul>
 	</script>
 
 	
 
 	<script class="colorsTemplate" type="text/template">
-		<ul>
 			{{#each colors}}
-			<li>{{this}}</li>
+			{{this}}
+			<br>
 			{{/each}}
-		</ul>
 		</script>
 
 	<script class="allCarsTemplate" type="text/template">
@@ -59,23 +57,30 @@
 </head>
 
 <body>
+	<div class="carsinfo">
 
-	<h1>Cars info</h1>
 
-	<h2>Colors</h2>
-	<div class="colors">
+
+		<h1>Cars info</h1>
+
+		<h2>Colors</h2>
+		<div class="colors">
+	
+		</div>
+	
+		<h2>Brands</h2>
+		<div class="brands">
+	
+		</div>
+	
+		<h2>Cars</h2>
+		<div class="cars">
+	
+		</div>
 
 	</div>
 
-	<h2>Brands</h2>
-	<div class="brands">
-
-	</div>
-
-	<h2>Cars</h2>
-	<div class="cars">
-
-	</div>
+	
 	<script src="cars.js"></script>
 </body>
 

@@ -82,6 +82,4 @@ submit.addEventListener('click', function () {
     } else {
         filter.innerHTML = "Please choose an option for color & or brand "
     }
-
-
 })

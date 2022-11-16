@@ -15,7 +15,6 @@ axios.get('https://api-tutor.herokuapp.com/v1/cars')
   allCarsElem.innerHTML = allCarsTemplate({
      allCars: response.data
   })
-  // console.log(response.data)
 });
 
 axios.get('https://api-tutor.herokuapp.com/v1/colors')

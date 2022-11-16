@@ -1,5 +1,11 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: lightsteelblue;
+}
+
+.dropdown{
+
+    text-align: center;
 
 }
 td{
@@ -8,9 +14,16 @@ td{
 
 table{
     border: 0.5px solid;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-h1{
+.carsinfo{
+    text-align: center;
 
-    
+
+}
+.outside{
+
+    text-align: center;
 }
